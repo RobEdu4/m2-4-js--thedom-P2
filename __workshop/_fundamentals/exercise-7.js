@@ -14,8 +14,32 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const addValues = (arr, obj) => {
-  // Insert missing solution please
+  return arr.map((item) => {
+    if (typeof obj === "object") {
+      return { ...item, obj };
+    } else {
+      return item;
+    }
+  });
+  /* no good
+  newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(arr[i] + obj);
+  }
+  return newArray;
+  */
 };
+
+console.log(
+  addValues(
+    [
+      { name: "chris", age: 23 },
+      { name: "liv", age: 36 },
+      { name: "dave", age: 43 },
+    ],
+    "sdfsdfsdf"
+  )
+);
 
 // Part 2 - Test
 // --------------

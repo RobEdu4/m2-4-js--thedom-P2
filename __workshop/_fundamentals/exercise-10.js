@@ -27,11 +27,16 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  return [
+    ...new Set([
+      ...arr1.filter((x) => !arr2.includes(x)),
+      ...arr2.filter((x) => !arr1.includes(x)),
+    ]),
+  ];
 };
 
 // Part 2 - Test
-// --------------
+console.log(uniqueElements([0, 1, 1, 3, 4, 5], [2, 2, 3, 4, 5, 6, 7, 8, 9]));
 // Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.

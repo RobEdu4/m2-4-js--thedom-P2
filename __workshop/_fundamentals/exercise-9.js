@@ -9,9 +9,31 @@
 // - To represent a newline character, you can use "\n".
 
 const wrapAfter40Chars = (paragraph) => {
-  // Your code here
-};
+  newString = "";
+  for (let i = 0; i < paragraph.length; i++) {
+    if ((i + 1) % 40 === 0) {
+      newString += `${paragraph[i]}\n`;
+    } else if (i % 40 === 0) {
+      paragraph[i] === " "
+        ? (newString = newString)
+        : (newString += paragraph[i]);
+    } else {
+      newString += paragraph[i];
+    }
 
+    //  no space removal
+    //  (i + 1) % 40 === 0
+    //    ? (newString += `${paragraph[i]}\n`)
+    //    : (newString += paragraph[i]);
+  }
+
+  return newString;
+};
+console.log(
+  wrapAfter40Chars(
+    "ewnf3492fnewiuenwsfkjdfwjefn493fhn39efunwsifnjkwsedfewkdfn349rnferiufnikjfnwekfwsfwfweikfjnwef934nfuwnewkjfnwfwekjnfwe3453453489759345983459283qewr9dsw9fn34w298efhnuiksjewr349w8rfhewsoin34w29ofeun34w9oeuifnj34we9ofn43ewoifn3ew439hnf3e4rfun3ewifun9fo34w2nf934wf3w9fn3wf"
+  )
+);
 // Part 2 - Test
 // --------------
 // Test your function.

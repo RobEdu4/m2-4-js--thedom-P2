@@ -11,7 +11,11 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+  let total = 0;
+  arr.forEach((obj) => {
+    sum += obj[key] && typeof obj[key] === "number" ? obj[key] : 0;
+  });
+  return total;
 };
 
 // Part 2 - Test

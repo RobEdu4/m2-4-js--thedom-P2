@@ -12,9 +12,14 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
+  newString = "";
+
+  newString = theString.split("").reverse().join("");
+
+  return theString === newString ? true : false;
 }
 
+console.log(isPalindrome("nope"));
 // Part 2 - Test
 // --------------
 // Test your function.

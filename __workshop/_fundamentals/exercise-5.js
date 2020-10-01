@@ -8,9 +8,17 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
-};
+  let result = 0;
+  console.log(result);
+  nums.forEach((...number) => {
+    if (typeof number === "number") result += number * number;
+    result = result + 1;
+    console.log(result);
+  });
+  return result;
 
+};
+console.log(addNumbers([1, 2, 3, 4, 5]));
 // Part 2 - Test
 // --------------
 // Test your function.

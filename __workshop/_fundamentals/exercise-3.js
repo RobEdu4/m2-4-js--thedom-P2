@@ -15,9 +15,17 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
+  return arr.map((item) => {
+    if (typeof obj === "object") {
+      return { ...item, obj };
+    } else {
+      return item;
+    }
+  });
 };
-
+console.log(
+  insert([{ name: "Bob" }, { name: "Billy" }], { isAvailable: false })
+);
 // Part 2 - Test
 // --------------
 // Test your function.
