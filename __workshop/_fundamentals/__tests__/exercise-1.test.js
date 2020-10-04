@@ -18,6 +18,12 @@ test("Exercise 1", () => {
     "5",
     "6",
   ]);
+  expect(convertToString([23, 53, 14, 36])).toStrictEqual([
+    "23",
+    "53",
+    "14",
+    "36",
+  ]);
   // add more tests here...
 });
 

@@ -37,7 +37,7 @@ console.log(
       { name: "liv", age: 36 },
       { name: "dave", age: 43 },
     ],
-    "sdfsdfsdf"
+    { isAvailable: true }
   )
 );
 

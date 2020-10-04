@@ -13,14 +13,23 @@
 const count = (arr, key) => {
   let total = 0;
   arr.forEach((obj) => {
-    sum += obj[key] && typeof obj[key] === "number" ? obj[key] : 0;
+    total +=
+      obj[`${key}`] && typeof obj[`${key}`] === "number" ? obj[`${key}`] : 0;
   });
   return total;
 };
 
 // Part 2 - Test
 // --------------
-// Test your function.
+console.log(
+  count(
+    [
+      { name: "Bob", amount: 25 },
+      { name: "Josie", amount: 30 },
+    ],
+    "amount"
+  )
+);
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.
 

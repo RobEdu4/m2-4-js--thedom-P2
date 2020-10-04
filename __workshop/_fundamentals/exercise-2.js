@@ -13,7 +13,7 @@ const redacted = (arr) => {
   return arr.map((item) => {
     return typeof item === "string" ? "redacted" : item;
   });
-  // GIT IT BOIIII
+
 
   /*  let newArray = [];
   for (let i = 0; i < arr.length; i++) {

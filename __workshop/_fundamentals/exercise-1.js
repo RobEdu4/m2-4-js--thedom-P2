@@ -6,6 +6,7 @@
 //
 
 const convertToString = (arr) => {
+  return arr.map((item) => item.toString());
   /*
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
@@ -13,7 +14,6 @@ const convertToString = (arr) => {
   }
   return newArray;
 */
-  return arr.map((item) => item.toString());
 };
 console.log(convertToString([23, 53, 14, 36]));
 

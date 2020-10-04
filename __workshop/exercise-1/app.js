@@ -3,14 +3,14 @@ const FROGS = 3;
 // ex1
 
 for (let i = 1; i <= FROGS; i++) {
-  const laneLi = document.createElement("li");
-  const laneNum = document.createElement("span");
+  const lane = document.createElement("li");
+  const number = document.createElement("span");
 
-  laneLi.id = `lane-${i}`;
-  laneNum.innerText = i;
+  lane.id = `lane-${i}`;
+  number.innerText = i;
 
-  laneLi.appendChild(laneNum);
-  track.appendChild(laneLi);
+  lane.appendChild(number);
+  track.appendChild(lane);
 }
 
 // ex2
@@ -25,7 +25,7 @@ for (let j = 0; j < FROGS; j++) {
 
 racers.forEach((racer, id) => {
   const newFrog = document.createElement("span");
-  //  newFrog.innerText = `${racer.name} (${racer.number})`;
+
   newFrog.innerText = `${racer.number}`;
   newFrog.style.background = racer.color;
   document.getElementById(`lane-${id + 1}`).appendChild(newFrog);
@@ -40,12 +40,12 @@ racers.forEach((racer, id) => {
 
   //ex5
 
-  racers[id].proress = 0;
-  racers[id].laneLi = `lane-${id + 1}`;
+  racers[id].progress = 0;
+  racers[id].lane = `lane-${id + 1}`;
 });
 
 // ex6
-/*
+
 function racingFrog(racer) {
   const trackWidth = track.offsetWidth;
 
@@ -62,7 +62,7 @@ function racingFrog(racer) {
     }
 
     document.querySelector(
-      `#${racer.laneLi} .frog`
+      `#${racer.lane} .frog`
     ).style.left = `${racer.progress}%`;
   }, Math.random() * 1000);
 }
@@ -70,4 +70,3 @@ function racingFrog(racer) {
 racers.forEach((racer) => racingFrog(racer));
 
 console.log(racers);
-*/

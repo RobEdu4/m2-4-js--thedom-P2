@@ -12,6 +12,24 @@ test("Exercise 4", () => {
       "amount"
     )
   ).toBe(145);
+  expect(
+    count(
+      [
+        { name: "Bob", amount: 25 },
+        { name: "Josie", amount: 30 },
+      ],
+      "amount"
+    )
+  ).toBe(55);
+  expect(
+    count(
+      [
+        { name: "Bob", amount: 25 },
+        { name: "Josie", amount: 30 },
+      ],
+      "name"
+    )
+  ).toBe(0);
   // add more tests here...
 });
 

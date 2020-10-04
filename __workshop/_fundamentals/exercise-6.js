@@ -19,7 +19,7 @@ function isPalindrome(theString) {
   return theString === newString ? true : false;
 }
 
-console.log(isPalindrome("nope"));
+console.log(isPalindrome("12321"));
 // Part 2 - Test
 // --------------
 // Test your function.
